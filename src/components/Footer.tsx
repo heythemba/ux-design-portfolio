@@ -21,7 +21,7 @@ export function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-slate-400">
-              © 2025 Sarah Chen. All rights reserved.
+              © 2025 Haythem Baganna. All rights reserved.
             </div>
             <div className="flex gap-4">
               <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white">
