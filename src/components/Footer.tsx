@@ -12,9 +12,9 @@ export function Footer() {
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
-          <Button size="lg" variant="secondary" className="gap-2">
+            <Button size="lg" variant="secondary" className="gap-2">
             <Mail className="w-5 h-5" />
-            sarah.chen@email.com
+            haythem.bag@gmail.com
           </Button>
         </div>
 

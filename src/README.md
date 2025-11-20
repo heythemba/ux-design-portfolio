@@ -109,7 +109,7 @@ This project is open source and available under the MIT License.
 
 ## Contact
 
-Haythem Baganna - sarah.chen@email.com
+Haythem Baganna - haythem.bag@gmail.com
 
 Project Link: [https://github.com/heythemba/ux-design-portfolio](https://github.com/heythemba/ux-design-portfolio)
 
