@@ -1,81 +1,96 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Design System Core */
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --font-heading: 'Stardos Stencil', serif;
+  --font-body: 'Supreme', sans-serif;
+
+  /* 4-Color Palette from Guidelines */
+  --color-bg: #FFF1E9;            /* Background */
+  --color-text: #1F1F1F;          /* Text / Content */
+  --color-primary: #C45124;       /* Primary Action */
+  --color-secondary: #EFAC93;     /* Secondary Action */
+
+  /* Legacy variable mapping (for existing components) */
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --card: var(--color-bg);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-bg);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-primary);
+  --primary-foreground: #FFF1E9; /* ensures contrast on primary buttons */
+  --secondary: var(--color-secondary);
+  --secondary-foreground: var(--color-text);
+  --muted: #F7E6DC; /* subtle tint derived from bg */
+  --muted-foreground: #4F4F4F;
+  --accent: #F9D1C0; /* light accent tone */
+  --accent-foreground: var(--color-text);
+  --destructive: #D4183D;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(31,31,31,0.12);
   --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --input-background: #FFE7D6;
+  --switch-background: #F2C7B6;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --ring: var(--color-primary);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Optional charts keep for now (mapped or neutral) */
+  --chart-1: #C45124;
+  --chart-2: #EFAC93;
+  --chart-3: #1F1F1F;
+  --chart-4: #D96F45;
+  --chart-5: #FFCBBA;
+
+  /* Sidebar legacy mapping */
+  --sidebar: var(--color-bg);
+  --sidebar-foreground: var(--color-text);
+  --sidebar-primary: var(--color-primary);
+  --sidebar-primary-foreground: #FFF1E9;
+  --sidebar-accent: var(--color-secondary);
+  --sidebar-accent-foreground: var(--color-text);
+  --sidebar-border: rgba(31,31,31,0.15);
+  --sidebar-ring: var(--color-primary);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  --background: #1F1F1F;
+  --foreground: #FFF1E9;
+  --card: #26211F;
+  --card-foreground: #FFF1E9;
+  --popover: #26211F;
+  --popover-foreground: #FFF1E9;
+  --primary: #C45124;
+  --primary-foreground: #FFF1E9;
+  --secondary: #EFAC93;
+  --secondary-foreground: #1F1F1F;
+  --muted: #2F2622;
+  --muted-foreground: #F3D9CD;
+  --accent: #3B2C27;
+  --accent-foreground: #FFF1E9;
+  --destructive: #D4183D;
+  --destructive-foreground: #FFF1E9;
+  --border: rgba(255, 241, 233, 0.18);
+  --input: #2F2622;
+  --ring: #EFAC93;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --chart-1: #EFAC93;
+  --chart-2: #C45124;
+  --chart-3: #FFF1E9;
+  --chart-4: #A63E1A;
+  --chart-5: #73301D;
+  --sidebar: #1F1F1F;
+  --sidebar-foreground: #FFF1E9;
+  --sidebar-primary: #C45124;
+  --sidebar-primary-foreground: #FFF1E9;
+  --sidebar-accent: #EFAC93;
+  --sidebar-accent-foreground: #1F1F1F;
+  --sidebar-border: rgba(255, 241, 233, 0.2);
+  --sidebar-ring: #EFAC93;
 }
 
 @theme inline {
@@ -126,6 +141,10 @@
 
   body {
     @apply bg-background text-foreground;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 400;
   }
 }
 
@@ -135,51 +154,67 @@
 @layer base {
   :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
     h1 {
+      font-family: var(--font-heading);
       font-size: var(--text-2xl);
-      font-weight: var(--font-weight-medium);
+      font-weight: 700;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     h2 {
+      font-family: var(--font-heading);
       font-size: var(--text-xl);
-      font-weight: var(--font-weight-medium);
+      font-weight: 700;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     h3 {
+      font-family: var(--font-heading);
       font-size: var(--text-lg);
-      font-weight: var(--font-weight-medium);
+      font-weight: 600;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     h4 {
+      font-family: var(--font-heading);
       font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
+      font-weight: 600;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     p {
+      font-family: var(--font-body);
       font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
+      font-weight: 400;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     label {
+      font-family: var(--font-body);
       font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
+      font-weight: 500;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     button {
+      font-family: var(--font-body);
       font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
+      font-weight: 500;
       line-height: 1.5;
+      color: var(--color-text);
     }
 
     input {
+      font-family: var(--font-body);
       font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
+      font-weight: 400;
       line-height: 1.5;
+      color: var(--color-text);
     }
   }
 }
@@ -257,4 +292,41 @@ html {
 
 /* Slightly dim shapes in dark mode for better contrast */
 .dark .bg-shapes .shape { mix-blend-mode: screen; filter: blur(70px) brightness(0.9); }
+
+/* Button styles aligned with design guidelines */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-body);
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: color-mix(in srgb, var(--color-primary) 88%, #000);
+  box-shadow: 0 8px 16px rgba(196, 81, 36, 0.25);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  border: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: color-mix(in srgb, var(--color-secondary) 88%, #000);
+  box-shadow: 0 8px 16px rgba(239, 172, 147, 0.25);
+}
+
+.btn-secondary.outline {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
 
